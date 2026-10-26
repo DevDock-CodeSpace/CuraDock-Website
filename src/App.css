@@ -1,0 +1,135 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  background: #0b0b0d;
+  color: #f4f4f5;
+}
+
+.sidebar {
+  width: 248px;
+  flex: 0 0 248px;
+  padding: 28px 16px;
+  border-right: 1px solid #252529;
+  background: #111113;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 4px 10px 30px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 11px;
+  background: #1764dc;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.navigation {
+  display: grid;
+  gap: 5px;
+}
+
+.navigation-link {
+  padding: 11px 12px;
+  border-radius: 8px;
+  color: #a1a1aa;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.navigation-link:hover {
+  background: #1c1c20;
+  color: #f4f4f5;
+}
+
+.navigation-link.active {
+  background: #202024;
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 72px clamp(28px, 8vw, 112px);
+}
+
+.main-content section {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #8b8b95;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.main-content h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+}
+
+.welcome-copy {
+  margin: 14px 0 0;
+  color: #a1a1aa;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 16px;
+    border-right: 0;
+    border-bottom: 1px solid #252529;
+  }
+
+  .brand {
+    padding: 0 4px 16px;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+  }
+
+  .navigation-link {
+    flex: 0 0 auto;
+    padding: 9px 11px;
+  }
+
+  .main-content {
+    padding: 44px 24px;
+  }
+}
